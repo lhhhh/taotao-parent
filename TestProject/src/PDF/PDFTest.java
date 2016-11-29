@@ -8,7 +8,7 @@ public class PDFTest {
 		
 		User user = new User();
         
-		user.setName("ÕÅÈı");
+		user.setName("å¼ ä¸‰");
 		user.setAge("20");
 		user.setCode("10086");
 		user.setHeight("180cm");
@@ -23,7 +23,7 @@ public class PDFTest {
         Long startTime = System.currentTimeMillis();
         file.createNewFile();
         pdfT.templetTicket(file);
-        System.out.println("ÏûºÄÊ±¼ä:"+(System.currentTimeMillis()-startTime));
+        System.out.println("ç”Ÿæˆpdfæ¶ˆè€—æ—¶é—´:"+(System.currentTimeMillis()-startTime));
        
         //OSSConfigureconfig = OSSUtil.getOSSConfigure();
         //OSSManageUtil.uploadFile(config, file, "aaabbbccc.pdf","pdf", "ticket/" + "aaabbbccc");
