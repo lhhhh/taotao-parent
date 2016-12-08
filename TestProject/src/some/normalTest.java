@@ -2,12 +2,16 @@ package some;
 
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.junit.Test;
+
+import PDF.User;
 
 public class normalTest {
 	
@@ -31,7 +35,7 @@ public class normalTest {
 //		list.add(1);
 //		list.add(3);
 //		
-//		//通过treeSet去重并排�?
+//		//通过treeSet去重并排�?
 //		list = new ArrayList<Integer>(new TreeSet<Integer>(list));
 //		for(Integer i : list){
 //			System.out.println(i);

@@ -17,7 +17,6 @@ public class PDFTemplet {
          private String targetPdfpath;
          private User user;
         
-        
          public PDFTemplet() {
                super();
          }
@@ -48,7 +47,7 @@ public class PDFTemplet {
                s.setField("code",user.getCode());
                s.setField("age",user.getAge());
                s.setField("height",user.getHeight());
-              
+               
                ps.setFormFlattening(true);
                ps.close();
               
