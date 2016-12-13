@@ -6,5 +6,9 @@ public class BirdOne extends Bird {
 	public String getName() {
 		return super.name;
 	}
+	
+	public void setName(String name){
+		super.setName(name);
+	}
 
 }

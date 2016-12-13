@@ -1,21 +1,19 @@
 package some;
 
+import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.junit.Test;
 
-import PDF.User;
-
 public class normalTest {
 	
 	@Test
+	@SuppressWarnings("rawtypes")
 	public void test() {
 		HashMap<String, Object> maps = new HashMap<String, Object>();
 		
@@ -99,6 +97,16 @@ public class normalTest {
 		maps.put(4, "04");
 		maps.put(5, "05");
 		System.out.println(maps.values());
+	}
+	
+	@Test
+	@SuppressWarnings({ "static-access" })
+	public void test5() throws Exception{
+		Bird bo = new BirdOne();
+		Class<?> clazz = getClass().forName(bo.getClass().getName());
+		Method invoke = clazz.getMethod("setName",String.class);
+		invoke.invoke(clazz,"newName");
+		bo.getName();
 	}
 	
 }
